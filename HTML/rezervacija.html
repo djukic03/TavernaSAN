@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervacija</title>
+    <link rel="shortcut icon" href="../Slike/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../CSS/rezervacija.css">
+</head>
+<body>
+    <h1>Rezervišite mesto</h1>
+    <form>
+        <label for="ime">Ime:</label><input type="text" id="ime" placeholder="Unesite Vaše ime..." autofocus required><br>
+        <label for="prezime">Prezime:</label> <input type="text" id="prezime" placeholder="Unesite Vaše prezime..." required>
+        <br><br>
+
+        <div class="pol">
+            <p>Pol:</p>
+            <div class="muski">
+                <input type="radio" name="pol" id="male" value="Muško" required><label for="male">Muško</label>
+            </div>    
+            <div class="zenski">
+                <input type="radio" name="pol" id="female" value="Žensko"><label for="female">Žensko</label>
+            </div>
+        </div>
+        <br>
+
+        <label for="termin">Termin:</label>
+        <select id="termin">
+            <optgroup label="Ručak">
+                <option value="13:00 - 14:00">13:00 - 14:00</option>
+                <option value="14:00 - 15:00">14:00 - 15:00</option>
+                <option value="15:00 - 16:00">15:00 - 16:00</option>
+            </optgroup>
+            <optgroup label="Večera">
+                <option value="18:00 - 19:00">18:00 - 19:00</option>
+                <option value="19:00 - 20:00">19:00 - 20:00</option>
+                <option value="20:00 - 21:00">20:00 - 21:00</option>
+                <option value="21:00 - 22:00">21:00 - 22:00</option>
+            </optgroup>
+        </select>
+        <br>
+
+        <p style="margin-bottom: 2px;">Tip rezervacije:</p>
+        <input type="radio" name="tip" id="jedno" value="Sto za jedno" required><label for="jedno">Sto za jedno</label><br>
+        <input type="radio" name="tip" id="dvoje" value="Sto za dvoje"><label for="dvoje">Sto za dvoje</label><br>
+        <input type="radio" name="tip" id="vise" value="Sto za više osoba"> <label for="vise">Sto za više osoba</label><br><br>
+
+        <p style="margin-bottom: 2px;">Posebna vrsta rezervacije:</p>
+        <input type="checkbox" name="usluge" id="grupa" value="Organizacija proslave">Proslava(venčanje, krštenje, punolestvo...)<br>
+        <input type="checkbox" name="usluge" id="romanticnavecera" value="Romantična večera">Romantična večera <br>
+        <input type="checkbox" name="usluge" id="rodjendan" value="Poslovni ručak">Poslovni ručak<br>
+        <input type="checkbox" name="usluge" id="vino" value="Degustacija vina">Degustacija vina <br>
+        <input type="checkbox" name="usluge" id="pivo" value="Pivsko veče">Pivsko veče <br>
+        <input type="checkbox" name="usluge" id="pivo" value="Brunch">Brunch<br><br>
+
+        <label for="napomene">Vaše napomene</label>
+        <textarea name="" id="napomene" cols="30" rows="4"></textarea>
+        <br><br>
+
+        <input id="resetbtn" type="reset" value="RESET">
+        <input id="submitbtn" type="submit" value="REZERVIŠI">
+    </form>
+    <script src="../JavaScript/rezervacija.js"></script>
+</body>
+</html>
